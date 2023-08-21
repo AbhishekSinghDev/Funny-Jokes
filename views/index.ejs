@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Funny Jokes</title>
+</head>
+
+<body>
+    <h1>Funny Jokes</h1>
+    <div class="card">
+        <img src="https://i.pinimg.com/originals/67/4e/80/674e809582c1aad18c095396813755d4.gif" alt="meme_dog">
+        <% if(locals.content) { %>
+            <p>
+                <%= content %>
+            </p>
+        <% } else { %>
+            <h1>Joke appear here</h1>
+            <% } %>
+        <form action="/get-random-joke" method="get">
+            <button type="submit">Get Random Joke</button>
+        </form>
+    </div>
+</body>
+
+</html>
